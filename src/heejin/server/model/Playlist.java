@@ -28,5 +28,9 @@ public class Playlist {
 		musics.remove(from);
 		musics.add(to, src);
 	}
+
+	public List<Music> toMusics() {
+		return musics;
+	}
 	
 }

@@ -27,5 +27,7 @@ public class SignController {
 		}
 		
 		return user;
-	}	
+	}
+	
+	// no logout
 }

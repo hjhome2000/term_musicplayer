@@ -5,6 +5,7 @@ public class Music {
 	private String artist;
 	private String title;
 	private String fileName;
+	private int price;
 	
 	// getters
 	public String getArtist() {
@@ -18,6 +19,10 @@ public class Music {
 	public String getFileName() {
 		return fileName;
 	}
+	
+	public int getPrice() {
+		return price;
+	}
 
 	// setters
 	public void setArtist(String artist) {
@@ -30,6 +35,16 @@ public class Music {
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	@Override
+	public int hashCode() {
+		String hashString = artist + title + fileName + price;
+		return hashString.hashCode();
 	}
 	
 }
