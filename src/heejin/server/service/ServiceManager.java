@@ -3,7 +3,7 @@ package heejin.server.service;
 public class ServiceManager {
 
 	static {
-		// 무조건 musicService가 먼저 로드되어야 함.
+		// this order can't reordered. musicService > userService
 		musicService = new MusicServiceImpl();
 		userService = new UserServiceImpl();
 	}
