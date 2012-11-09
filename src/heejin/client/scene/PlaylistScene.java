@@ -13,7 +13,7 @@ public class PlaylistScene extends AbstractScene {
 	
 	@Override
 	public void start() {
-		System.out.println("- 내 재생 목록");
+		System.out.println("- My Playlist");
 	}
 
 	@Override
