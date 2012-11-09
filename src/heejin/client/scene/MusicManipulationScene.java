@@ -16,23 +16,23 @@ public class MusicManipulationScene extends AbstractScene {
 	
 	@Override
 	public void start() {
-		System.out.println("- 음악 구입");
+		System.out.println("- Buy Music");
 	}
 
 	@Override
 	public void resume() {
 		System.out.println(music.getTitle());
 		
-		System.out.println(">> 1. 구입 2. 취소");
+		System.out.println(">> 1. Buy 2. Cancel");
 		int select = Application.getScanner().nextInt();
 		
 		switch(select) {
-		case 1: // 구입
+		case 1: // Buy
 			boolean bought = getServer().getUserController().buyMusic(user, music);
 			if(bought) {
-				System.out.println("구입 성공.");
+				System.out.println("Success.");
 			} else {
-				System.out.println("구입 실패.");
+				System.out.println("Failed to buy (not enough cash).");
 			}
 			break;
 		case 2: // 취소
