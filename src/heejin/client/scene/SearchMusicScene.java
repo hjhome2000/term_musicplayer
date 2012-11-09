@@ -17,12 +17,12 @@ public class SearchMusicScene extends AbstractScene {
 	
 	@Override
 	public void start() {
-		System.out.println("- 음악 검색");
+		System.out.println("- Search Music");
 	}
 
 	@Override
 	public void resume() {
-		System.out.println(">> 제목이나 가수 명을 적으세요.");
+		System.out.println(">> Type title or artist.");
 		
 		String subject = Application.getScanner().next();
 		List<Music> result = getServer().getMusicController().findMusic(subject);
@@ -34,7 +34,7 @@ public class SearchMusicScene extends AbstractScene {
 			Application.replaceTopScene(musicScene);
 		} else {
 			// no
-			System.out.println("* 결과 없음");
+			System.out.println("* No result");
 		}
 		
 		close();
