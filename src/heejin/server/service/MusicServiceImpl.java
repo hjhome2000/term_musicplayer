@@ -69,7 +69,7 @@ public class MusicServiceImpl implements MusicService {
 				newMusic.setPrice(price);
 				
 				musics.add(newMusic);
-				musicMap.put(newMusic.hashCode() + "", newMusic); // 맵에도 저장
+				musicMap.put(newMusic.hashCode() + "", newMusic); // Save to Map also.
 			}
 			
 			reader.close();
