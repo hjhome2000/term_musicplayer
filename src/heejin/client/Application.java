@@ -20,7 +20,7 @@ public class Application {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// 초기화
+		// load first Scene
 		scenes = new Stack<AbstractScene>();
 		
 		LoginScene loginScene = new LoginScene();
@@ -42,7 +42,7 @@ public class Application {
 		scenes.clear();
 	}
 	
-	// 씬 관리
+	// Scene Management Functions
 	public static void pushScene(AbstractScene scene) {
 		System.out.println("");
 		
