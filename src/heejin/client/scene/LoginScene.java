@@ -7,13 +7,13 @@ public class LoginScene extends AbstractScene {
 
 	@Override
 	public void start() {
-		System.out.println("- 로그인");
+		System.out.println("- Login");
 	}
 
 	@Override
 	public void resume() {
 
-		System.out.println(">> 1. 사용자 생성 2. 로그인");
+		System.out.println(">> 1. Create User 2. Sign in");
 		
 		int select = Application.getScanner().nextInt();
 		boolean loginSuccess = false;
