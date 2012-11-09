@@ -13,14 +13,14 @@ public class LobbyScene extends AbstractScene {
 	
 	@Override
 	public void start() {
-		System.out.println("- 로비");
-		System.out.println(user.getUserName() + " 로그인 성공");
-		System.out.println("총 " + user.getCash() + " 충전");
+		System.out.println("- Lobby");
+		System.out.println(user.getUserName() + " Login Succeed");
+		System.out.println("Total Cash is " + user.getCash());
 	}
 
 	@Override
 	public void resume() {
-		System.out.println(">> 1. 음악 검색 2. 내 재생목록 3. 충전 4. 종료");
+		System.out.println(">> 1. Search Musics 2. My Playlist 3. Cash Charge 4. Exit");
 		
 		int select = Application.getScanner().nextInt();
 		switch(select) {
@@ -34,7 +34,7 @@ public class LobbyScene extends AbstractScene {
 			Application.pushScene(playlistScene);
 			
 			break;
-		case 3: // 충전
+		case 3: // Charge
 			ChargeScene chargeScene = new ChargeScene(user);
 			Application.pushScene(chargeScene);
 			
